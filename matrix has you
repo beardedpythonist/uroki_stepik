@@ -113,3 +113,63 @@ for i in range(n):
 print(x, y)
 
 
+обмен столбцов
+n = int(input())
+m = int(input())
+matrix = [0] * n
+for i in range(n):
+    matrix[i] = [] * m
+s = ''
+ls1 = []
+for i in range(n):
+    s = str(input())
+    ls = s.split()
+    for j in range(len(ls)):
+        ls[j] = int(ls[j])
+        matrix[i].append(ls[j])
+s = str(input())
+ls = s.split()
+ls[0] = int(ls[0])
+ls[1] = int(ls[1])
+j1 = ls[0]
+j2 = ls[1]
+for i in range(n):
+    for j in range(m):
+        if j == j1:
+            matrix[i][j], matrix[i][j2] = matrix[i][j2], matrix[i][j]
+for i in range(n):
+    for j in range(m):
+        print(matrix[i][j], end=' ')
+    print()
+
+
+
+симетричность по главн диагонали
+
+
+n = int(input())
+matrix = [0] * n
+for i in range(n):
+    matrix[i] = [] * n
+s = ''
+ls1 = []
+for i in range(n):
+    s = str(input())
+    ls = s.split()
+    for j in range(len(ls)):
+        ls[j] = int(ls[j])
+        matrix[i].append(ls[j])
+s =''
+for i in range(n):
+    for j in range(n):
+        if i != j:
+            if matrix[i][j] != matrix[j][i]:
+                s = 'NO'
+                break
+            else:
+                s = 'YES'
+
+print(s)
+
+
+
