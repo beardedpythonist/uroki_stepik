@@ -1,0 +1,19 @@
+slov = {
+    "1": ".,?!:",
+    "2": "ABC",
+    "3": "DEF",
+    "4": "GHI",
+    "5": "JKL",
+    "6": "MNO",
+    "7": "PQRS",
+    "8": "TUV",
+    "9": "WXYZ",
+    "0": " "}
+
+s = str(input()).upper()
+for c in range(len(s)):
+    for q, w in slov.items():
+        if s[c] in w:
+            x = w.index(s[c]) + 1
+            y = x * q
+            print(y, end='')
